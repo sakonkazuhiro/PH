@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Services from "@/components/Services";
 import Works from "@/components/Works";
+import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
 
         <Services />
         <Works />
+        <Pricing />
 
         <div className="max-w-[1100px] mx-auto px-5 pb-20">
           <Contact />
