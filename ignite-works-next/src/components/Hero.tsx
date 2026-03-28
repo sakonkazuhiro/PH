@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pt-[120px] pb-[120px] max-lg:pt-[100px] max-lg:pb-[80px]">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-8">
       {/* 左カラム */}
       <div className="max-lg:text-center max-lg:flex max-lg:flex-col max-lg:items-center">
         <Image
@@ -11,7 +11,7 @@ export default function Hero() {
           alt="Ignite Works ロゴ"
           width={1024}
           height={1024}
-          className="w-[240px] h-auto max-lg:mx-auto"
+          className="w-[312px] h-auto max-lg:mx-auto"
           priority
         />
 
@@ -59,7 +59,7 @@ export default function Hero() {
             alt="Ignite Works アイコン（IW ロゴ）"
             width={512}
             height={512}
-            className="max-w-[520px] w-full rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
+            className="max-w-[650px] w-full rounded-2xl shadow-xl"
             priority
           />
         </div>
