@@ -21,7 +21,7 @@ const SKILLS = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-14 border-t border-black/10">
+    <section id="skills" className="py-14 border-t border-[#0f766e]/12">
       <header className="text-center md:text-left">
         <h2 className="text-[22px] font-bold m-0">Skills</h2>
         <p className="mt-1.5 text-[#444]">できること</p>
@@ -31,7 +31,7 @@ export default function Skills() {
         {SKILLS.map((s) => (
           <article
             key={s.num}
-            className="border border-black/10 rounded-2xl p-4"
+            className="border border-[#0f766e]/12 rounded-2xl p-4 bg-white shadow-[0_4px_14px_rgba(0,0,0,0.05)]"
           >
             <h3 className="font-bold m-0 mb-2">
               ({s.num}) {s.title}

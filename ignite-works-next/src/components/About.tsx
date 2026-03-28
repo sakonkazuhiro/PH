@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-14 border-t border-black/10">
+    <section id="about" className="py-14 border-t border-[#0f766e]/12">
       <header className="text-center md:text-left">
         <h2 className="text-[22px] font-bold m-0">About</h2>
         <p className="mt-1.5 text-[#444]">私について</p>

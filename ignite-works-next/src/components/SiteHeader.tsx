@@ -22,14 +22,14 @@ export default function SiteHeader() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-[100px] md:h-[150px] flex items-center justify-between px-4 md:px-5 bg-white shadow-[0_1px_10px_rgba(0,0,0,0.15)] z-50">
+      <header className="fixed top-0 left-0 w-full h-[100px] md:h-[150px] flex items-center justify-between px-4 md:px-5 bg-[#dff4ff] text-[#0f4f4a] shadow-[0_1px_10px_rgba(15,118,110,0.16)] z-50">
         <Link href="#top" aria-label="トップへ" onClick={handleScrollTop}>
           <Image
             src="/img/logo/IGNITE-WORKS-512.png"
             alt="Ignite Works ロゴ"
             width={512}
             height={512}
-            className="h-[80px] md:h-[130px] w-auto object-contain"
+            className="h-[80px] md:h-[130px] w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.25)]"
           />
         </Link>
 
@@ -40,7 +40,7 @@ export default function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="no-underline text-[#111] px-3 py-2.5 rounded-[10px] hover:bg-black/5 transition-colors"
+                  className="no-underline text-[#0f4f4a] px-3 py-2.5 rounded-[10px] hover:bg-[#0f766e]/10 transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -52,14 +52,14 @@ export default function SiteHeader() {
         {/* モバイル用ハンバーガー */}
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-black/10 bg-white shadow-sm"
+          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-[#0f766e]/25 bg-white/70 shadow-sm"
           aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
           onClick={() => setMenuOpen((v) => !v)}
         >
           <span className="relative block w-5 h-4">
             {/* 上の線 */}
             <span
-              className={`absolute left-0 w-5 h-[2px] bg-[#111] rounded origin-center transition-all duration-200 ${
+              className={`absolute left-0 w-5 h-[2px] bg-[#0f4f4a] rounded origin-center transition-all duration-200 ${
                 menuOpen
                   ? "top-1/2 -translate-y-1/2 rotate-45"
                   : "top-0 translate-y-0 rotate-0"
@@ -67,7 +67,7 @@ export default function SiteHeader() {
             />
             {/* 真ん中の線 */}
             <span
-              className={`absolute left-0 w-5 h-[2px] bg-[#111] rounded origin-center transition-all duration-200 ${
+              className={`absolute left-0 w-5 h-[2px] bg-[#0f4f4a] rounded origin-center transition-all duration-200 ${
                 menuOpen
                   ? "top-1/2 -translate-y-1/2 opacity-0"
                   : "top-1/2 -translate-y-1/2 opacity-100"
@@ -75,7 +75,7 @@ export default function SiteHeader() {
             />
             {/* 下の線 */}
             <span
-              className={`absolute left-0 w-5 h-[2px] bg-[#111] rounded origin-center transition-all duration-200 ${
+              className={`absolute left-0 w-5 h-[2px] bg-[#0f4f4a] rounded origin-center transition-all duration-200 ${
                 menuOpen
                   ? "top-1/2 -translate-y-1/2 -rotate-45"
                   : "bottom-0 translate-y-0 rotate-0"
@@ -89,28 +89,28 @@ export default function SiteHeader() {
       {menuOpen && (
         <nav
           aria-label="モバイルメニュー"
-          className="fixed inset-0 z-50 md:hidden bg-white text-[#111]"
+          className="fixed inset-0 z-50 md:hidden bg-[#f5fbff] text-[#111]"
         >
           <div className="flex flex-col h-full">
             {/* 上部バー（ロゴ + 閉じるボタン） */}
-            <div className="flex items-center justify-between px-4 pt-6 pb-4 border-b border-black/10">
+            <div className="flex items-center justify-between px-4 pt-6 pb-4 bg-[#dff4ff] border-b border-[#0f766e]/15">
               <Image
                 src="/img/logo/IGNITE-WORKS-512.png"
                 alt="Ignite Works ロゴ"
                 width={200}
                 height={60}
-                className="h-10 w-auto object-contain"
+                className="h-10 w-auto object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
               />
 
               <button
                 type="button"
                 aria-label="メニューを閉じる"
-                className="w-10 h-10 inline-flex items-center justify-center"
+                className="w-10 h-10 inline-flex items-center justify-center rounded-full hover:bg-[#0f766e]/10 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 <span className="relative block w-6 h-6">
-                  <span className="absolute top-1/2 left-1/2 w-6 h-[2px] bg-[#111] -translate-x-1/2 -translate-y-1/2 rotate-45" />
-                  <span className="absolute top-1/2 left-1/2 w-6 h-[2px] bg-[#111] -translate-x-1/2 -translate-y-1/2 -rotate-45" />
+                  <span className="absolute top-1/2 left-1/2 w-6 h-[2px] bg-[#0f4f4a] -translate-x-1/2 -translate-y-1/2 rotate-45" />
+                  <span className="absolute top-1/2 left-1/2 w-6 h-[2px] bg-[#0f4f4a] -translate-x-1/2 -translate-y-1/2 -rotate-45" />
                 </span>
               </button>
             </div>
@@ -121,11 +121,11 @@ export default function SiteHeader() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-block no-underline text-[#111]"
+                    className="inline-block no-underline text-[#111] hover:text-[#0f766e] transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
                     <span className="block mb-1">{item.label}</span>
-                    <span className="block mx-auto w-10 h-px bg-black/10" />
+                    <span className="block mx-auto w-10 h-px bg-[#0f766e]/20" />
                   </Link>
                 </li>
               ))}

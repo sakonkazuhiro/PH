@@ -15,7 +15,7 @@ const SNS_LINKS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-14 border-t border-black/10">
+    <section id="contact" className="py-14 border-t border-[#0f766e]/12">
       <header className="text-center md:text-left">
         <h2 className="text-[22px] font-bold m-0">Contact</h2>
         <p className="mt-1.5 text-[#444]">お問い合わせ</p>
@@ -32,7 +32,7 @@ export default function Contact() {
             </p>
             <a
               href="mailto:lunatic5273@gmail.com"
-              className="text-[#111] hover:text-blue-600 transition-colors no-underline hover:underline"
+              className="text-[#111] hover:text-[#10b981] transition-colors no-underline hover:underline"
             >
               lunatic5273@gmail.com
             </a>
@@ -50,7 +50,7 @@ export default function Contact() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#111] hover:text-blue-600 transition-colors no-underline hover:underline"
+                  className="text-[#111] hover:text-[#10b981] transition-colors no-underline hover:underline"
                 >
                   {link.label}
                 </a>

@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ポートフォリオ配色（水色 × 緑） */
+:root {
+  --color-page-bg: #f5fbff;
+  --color-teal-dark: #0f766e;
+  --color-accent: #10b981;
+  --color-accent-hover: #0d5f59;
+  --color-card: #ffffff;
+}
+
 html {
   scroll-behavior: smooth;
+  background: var(--color-page-bg);
 }
 
 body {
   color: #111;
-  background: #fff;
+  background: var(--color-page-bg);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
   line-height: 1.8;
 }
@@ -38,10 +48,10 @@ body {
     border-radius: 999px;
     background: radial-gradient(
       ellipse at 30% 30%,
-      rgba(255, 192, 203, 0.8),
-      rgba(255, 182, 193, 0.18)
+      rgba(255, 192, 203, 0.42),
+      rgba(255, 182, 193, 0.1)
     );
-    opacity: 0.5;
+    opacity: 0.32;
     transform-origin: center;
     animation: sakura-drift linear infinite;
   }
@@ -72,7 +82,7 @@ body {
       opacity: 0;
     }
     10% {
-      opacity: 0.45;
+      opacity: 0.28;
     }
     25% {
       transform: translate3d(var(--drift), 25vh, 0) rotate(calc(var(--rotate) * 0.25)) scale(var(--scale));
@@ -93,6 +103,6 @@ body {
     .sakura {
       width: 12px;
       height: 10px;
-      opacity: 0.38;
+      opacity: 0.22;
     }
   }

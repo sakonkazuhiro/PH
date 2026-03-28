@@ -76,7 +76,7 @@ function WorkCard({ work }: { work: Work }) {
     <>
       {/* バッジ */}
       {work.badge && (
-        <span className="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+        <span className="absolute top-4 left-4 z-10 bg-[#10b981] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
           {work.badge}
         </span>
       )}
@@ -100,7 +100,7 @@ function WorkCard({ work }: { work: Work }) {
 
       {/* コンテンツ */}
       <div className="p-5 text-center md:text-left">
-        <span className="inline-block text-xs font-semibold text-red-600 bg-red-50 px-2.5 py-1 rounded-md">
+        <span className="inline-block text-xs font-semibold text-[#0f766e] bg-emerald-50 px-2.5 py-1 rounded-md">
           {work.category}
         </span>
 
@@ -114,7 +114,7 @@ function WorkCard({ work }: { work: Work }) {
 
         <p className="mt-3 text-xs text-[#999]">{work.scope}</p>
 
-        <span className="mt-4 inline-block text-sm font-semibold text-white bg-black rounded-lg px-4 py-2 group-hover:bg-black/80 transition-colors">
+        <span className="mt-4 inline-block text-sm font-semibold text-white bg-[#10b981] rounded-lg px-4 py-2 group-hover:bg-[#0d5f59] transition-colors shadow-sm">
           詳細を見る →
         </span>
       </div>
@@ -142,7 +142,7 @@ export default function Works() {
     <section id="works" className="pt-[100px] pb-[100px]">
       {/* セクションヘッダー */}
       <div className="max-w-[1200px] mx-auto px-5 text-center md:text-left">
-        <p className="text-sm font-semibold tracking-wider text-red-600 mb-1">
+        <p className="text-sm font-semibold tracking-wider text-[#0f766e] mb-1">
           制作実績
         </p>
         <h2 className="text-3xl font-bold m-0">Works</h2>

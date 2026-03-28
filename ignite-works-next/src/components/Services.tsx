@@ -8,7 +8,7 @@ type Service = {
 };
 
 const MonitorIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-red-600">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#10b981]">
     <rect x="2" y="3" width="20" height="14" rx="2" />
     <path d="M8 21h8" />
     <path d="M12 17v4" />
@@ -16,14 +16,14 @@ const MonitorIcon = () => (
 );
 
 const PlayIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-red-600">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#10b981]">
     <rect x="2" y="2" width="20" height="20" rx="2" />
     <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none" />
   </svg>
 );
 
 const SmartphoneIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-red-600">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#10b981]">
     <rect x="5" y="2" width="14" height="20" rx="2" />
     <path d="M12 18h.01" />
   </svg>
@@ -56,7 +56,7 @@ const servicesData: Service[] = [
 function ServiceCard({ service }: { service: Service }) {
   return (
     <article className="bg-white rounded-2xl p-8 shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 text-center md:text-left">
-      <div className="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-5 mx-auto md:mx-0">
+      <div className="w-14 h-14 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 mx-auto md:mx-0">
         {service.icon}
       </div>
 
@@ -85,7 +85,7 @@ export default function Services() {
     <section id="services" className="pt-[100px] pb-[100px]">
       <div className="max-w-[1200px] mx-auto px-5">
         {/* ヘッダー */}
-        <p className="text-sm font-semibold tracking-wider text-red-600 mb-1 text-center md:text-left">
+        <p className="text-sm font-semibold tracking-wider text-[#0f766e] mb-1 text-center md:text-left">
           できること
         </p>
         <h2 className="text-3xl font-bold m-0 text-center md:text-left">
@@ -109,7 +109,7 @@ export default function Services() {
           </p>
           <Link
             href="#contact"
-            className="mt-4 inline-block bg-black text-white rounded-lg px-5 py-3 no-underline text-sm font-semibold hover:bg-black/80 transition-colors"
+            className="mt-4 inline-block bg-[#10b981] text-white rounded-lg px-5 py-3 no-underline text-sm font-semibold hover:bg-[#0d5f59] transition-colors shadow-sm"
           >
             相談する
           </Link>

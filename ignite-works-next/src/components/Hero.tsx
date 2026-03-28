@@ -38,13 +38,13 @@ export default function Hero() {
         <div className="mt-8 flex gap-3 flex-wrap max-lg:justify-center">
           <Link
             href="#contact"
-            className="inline-block bg-black text-white rounded-lg px-5 py-3 no-underline hover:bg-black/80 transition-colors"
+            className="inline-block bg-[#10b981] text-white rounded-lg px-5 py-3 no-underline font-semibold hover:bg-[#0d5f59] transition-colors shadow-sm"
           >
             相談する
           </Link>
           <Link
             href="#works"
-            className="inline-block border border-[#ccc] rounded-lg px-5 py-3 no-underline text-[#111] hover:bg-black/5 transition-colors"
+            className="inline-block border border-[#10b981]/35 rounded-lg px-5 py-3 no-underline text-[#0f766e] hover:bg-[#10b981]/10 transition-colors"
           >
             実績を見る
           </Link>
@@ -52,15 +52,17 @@ export default function Hero() {
       </div>
 
       {/* 右カラム */}
-      <div className="relative max-lg:order-first max-lg:flex max-lg:justify-center">
-        <Image
-          src="/img/logo/S__125526018.png"
-          alt="Ignite Works アイコン（IW ロゴ）"
-          width={512}
-          height={512}
-          className="max-w-[520px] w-full rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
-          priority
-        />
+      <div className="relative max-lg:order-first max-lg:flex max-lg:justify-center p-4 md:p-6">
+        <div className="w-full flex justify-center">
+          <Image
+            src="/img/logo/S__125526018.png"
+            alt="Ignite Works アイコン（IW ロゴ）"
+            width={512}
+            height={512}
+            className="max-w-[520px] w-full rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
+            priority
+          />
+        </div>
       </div>
     </section>
   );

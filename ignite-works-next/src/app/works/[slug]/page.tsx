@@ -12,7 +12,7 @@ export default function WorkDetail({
       <p className="text-[#666] mb-8">詳細ページは準備中です。</p>
       <Link
         href="/#works"
-        className="text-sm font-semibold text-white bg-black rounded-lg px-5 py-2.5 no-underline hover:bg-black/80 transition-colors"
+        className="text-sm font-semibold text-white bg-[#10b981] rounded-lg px-5 py-2.5 no-underline hover:bg-[#0d5f59] transition-colors shadow-sm"
       >
         ← 戻る
       </Link>

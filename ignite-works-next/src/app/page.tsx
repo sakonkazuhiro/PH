@@ -13,8 +13,13 @@ export default function Home() {
     <>
       <SiteHeader />
       <main id="top" className="pt-[110px] md:pt-[150px]">
+        <section className="bg-[#e6f6ee]">
+          <div className="max-w-[1100px] mx-auto px-5">
+            <Hero />
+          </div>
+        </section>
+
         <div className="max-w-[1100px] mx-auto px-5">
-          <Hero />
           <About />
           <Skills />
         </div>
