@@ -11,11 +11,11 @@ export default function About() {
       <div className="grid grid-cols-[320px_1fr] gap-6 mt-5 items-start max-md:grid-cols-1 max-md:text-center">
         <div>
           <Image
-            src="/img/logo/IGNITE-WORKS.1024.png"
-            alt="Ignite Works ロゴ"
+            src="/img/logo/S__128212996.jpg"
+            alt="佐近 和洋のプロフィール写真"
             width={320}
             height={320}
-            className="rounded-2xl w-full h-auto object-contain bg-gray-50"
+            className="rounded-2xl w-full h-auto object-cover"
           />
         </div>
 
