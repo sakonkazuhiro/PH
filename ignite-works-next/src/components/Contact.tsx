@@ -5,11 +5,11 @@ const SNS_LINKS = [
   },
   {
     label: "TikTok",
-    href: "https://www.tiktok.com/@gakuoni35",
+    href: "https://www.tiktok.com/@gokuoni40",
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/@GokudouOnigiri",
+    href: "https://www.youtube.com/@GokuOni",
   },
 ];
 
