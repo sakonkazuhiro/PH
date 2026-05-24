@@ -11,6 +11,7 @@ type Work = {
   featured?: boolean;
   badge?: string;
   externalUrl?: string;
+  mapUrl?: string;
 };
 
 const worksData: Work[] = [
@@ -21,7 +22,7 @@ const worksData: Work[] = [
     description:
       "洋食レストランの公式サイトを制作。料理写真・導線設計・スマホ最適化を重視。",
     scope: "Web制作 / メニュー設計 / レスポンシブ対応",
-    thumbnail: "/img/hoshi-screenshot.png",
+    thumbnail: "/img/logo/hoshi-screenshot.png",
     featured: true,
     badge: "現在制作・運用中",
     externalUrl: "https://srm-rho.vercel.app/",
@@ -34,15 +35,17 @@ const worksData: Work[] = [
       "TikTok・YouTube・Instagram向けに動画導線と投稿設計を実施。",
     scope: "動画編集 / 投稿設計 / SNS運用",
     thumbnail: null,
+    externalUrl: "https://www.instagram.com/hoshinokitchen2286",
   },
   {
     slug: "store-flow",
     category: "運用・改善",
     title: "店舗集客導線の改善",
     description:
-      "Web・動画・SNSを組み合わせ、来店につながる導線を改善。",
+      "ホシのキッチンを対象に、Web・動画・SNSを組み合わせ来店につながる導線を改善。",
     scope: "導線改善 / 情報整理 / 継続運用",
     thumbnail: null,
+    mapUrl: "https://www.google.com/maps/place/ホシのキッチン/",
   },
 ];
 
@@ -66,8 +69,8 @@ function Placeholder({ tall }: { tall?: boolean }) {
 
 function WorkCard({ work }: { work: Work }) {
   const isFeatured = work.featured;
-  const href = work.externalUrl ?? `/works/${work.slug}`;
-  const isExternal = !!work.externalUrl;
+  const href = work.externalUrl ?? work.mapUrl ?? `/works/${work.slug}`;
+  const isExternal = !!(work.externalUrl || work.mapUrl);
   const cardClass = `group relative bg-white rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 no-underline text-inherit block ${
     isFeatured ? "md:col-span-2 lg:col-span-2" : ""
   }`;
@@ -114,8 +117,21 @@ function WorkCard({ work }: { work: Work }) {
 
         <p className="mt-3 text-xs text-[#999]">{work.scope}</p>
 
+        {work.mapUrl && (
+          <div className="mt-4 w-full overflow-hidden rounded-xl border border-[#0f766e]/15">
+            <iframe
+              src="https://maps.google.com/maps?q=%E3%83%9B%E3%82%B7%E3%81%AE%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3&hl=ja&z=15&output=embed"
+              title="ホシのキッチン Googleマップ"
+              className="w-full h-[220px] border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        )}
+
         <span className="mt-4 inline-block text-sm font-semibold text-white bg-[#10b981] rounded-lg px-4 py-2 group-hover:bg-[#0d5f59] transition-colors shadow-sm">
-          詳細を見る →
+          {work.mapUrl ? "地図を見る →" : work.externalUrl?.includes("instagram") ? "Instagramを見る →" : "詳細を見る →"}
         </span>
       </div>
     </>
