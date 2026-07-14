@@ -17,6 +17,12 @@ const SKILLS = [
     desc: "短尺動画と運用設計。投稿→Web→来店の流れを整え、継続改善できる型を作ります。",
     tools: "Premiere Pro ほか",
   },
+  {
+    num: "04",
+    title: "AI運用",
+    desc: "AIを活用した業務効率化やコンテンツ制作を支援。店舗運営に合わせた導入・運用設計を行います。",
+    tools: "ChatGPT / Cursor ほか",
+  },
 ];
 
 export default function Skills() {
@@ -27,7 +33,7 @@ export default function Skills() {
         <p className="mt-1.5 text-[#444]">できること</p>
       </header>
 
-      <div className="grid grid-cols-3 gap-4 mt-5 max-md:grid-cols-1 max-md:text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5 max-md:text-center">
         {SKILLS.map((s) => (
           <article
             key={s.num}

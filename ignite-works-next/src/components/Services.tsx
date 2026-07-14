@@ -29,6 +29,13 @@ const SmartphoneIcon = () => (
   </svg>
 );
 
+const SparklesIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#10b981]">
+    <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+    <path d="M19 13l.75 2.25L22 16l-2.25.75L19 19l-.75-2.25L16 16l2.25-.75L19 13z" />
+  </svg>
+);
+
 const servicesData: Service[] = [
   {
     icon: <MonitorIcon />,
@@ -50,6 +57,13 @@ const servicesData: Service[] = [
     description:
       "投稿設計・見せ方・導線を整理し、継続しやすいSNS運用をサポートします。",
     items: ["TikTok運用", "Instagram導線", "投稿改善", "継続運用サポート"],
+  },
+  {
+    icon: <SparklesIcon />,
+    title: "AI運用",
+    description:
+      "AIを活用した業務効率化やコンテンツ制作を支援。店舗運営に合わせた導入・運用設計を行います。",
+    items: ["AI導入支援", "業務効率化", "コンテンツ支援", "運用設計"],
   },
 ];
 
@@ -92,11 +106,11 @@ export default function Services() {
           Services
         </h2>
         <p className="mt-2 text-[#666] text-center md:text-left">
-          Web制作・動画編集・SNS運用を組み合わせ、店舗集客につながる導線を設計します。
+          Web制作・動画編集・SNS運用・AI運用を組み合わせ、店舗集客につながる導線を設計します。
         </p>
 
         {/* カードグリッド */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {servicesData.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
@@ -105,7 +119,7 @@ export default function Services() {
         {/* CTA */}
         <div className="mt-14 text-center">
           <p className="text-[#555]">
-            Web・動画・SNSをまとめて相談したい方は、お気軽にご連絡ください。
+            Web・動画・SNS・AIをまとめて相談したい方は、お気軽にご連絡ください。
           </p>
           <Link
             href="#contact"

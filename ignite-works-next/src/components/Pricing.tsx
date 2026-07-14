@@ -14,14 +14,14 @@ type Plan = {
 const plans: Plan[] = [
   {
     name: "シンプル",
-    price: "from JPY 30,000",
+    price: "応相談",
     description:
       "まずは形にしたい方向け。1ページ構成や小規模サイトなど、必要最小限でスピーディに立ち上げます。",
     bullets: ["LP・小規模サイト", "スマホ対応", "お問い合わせ導線"],
   },
   {
     name: "スタンダード（おすすめ）",
-    price: "¥50,000〜",
+    price: "応相談",
     bullets: [
       "複数ページ構成",
       "お問い合わせ導線",
@@ -35,7 +35,7 @@ const plans: Plan[] = [
   },
   {
     name: "運用・管理",
-    price: "JPY 10,000 / month",
+    price: "￥10,000 / month（最初の３ヶ月、￥５０００）",
     description:
       "公開後の更新・SNS連携・軽微な修正など、継続的にサイトを育てるための伴走プランです。",
     bullets: ["定期更新", "軽微な修正", "相談しやすい窓口"],
@@ -69,7 +69,7 @@ function PricingCard({ plan }: { plan: Plan }) {
       >
         {plan.name}
       </h3>
-      <p className="mt-3 text-2xl font-bold text-[#111] tracking-tight">
+      <p className="mt-3 text-2xl font-bold text-red-600 tracking-tight">
         {plan.price}
       </p>
 
